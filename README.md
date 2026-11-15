@@ -16,8 +16,10 @@ A Claude skill that turns any topic, lesson, notes, or slides into a clean, two-
 
 | Use | Font |
 |---|---|
-| Text and headings | [Finlandica Text](https://fonts.google.com/specimen/Finlandica+Text) |
+| Text and headings | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) |
 | Code and labels | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) |
+
+Both fonts are embedded in the generated PDF.
 
 ## Install
 
@@ -33,13 +35,6 @@ Just ask in chat, for example:
 - "Study guide for photosynthesis, guide 1 of 2"
 - "Reviewer for my capstone defense based on this repo"
 
-## Files
-
-```
-study-guide/
-├── SKILL.md   # the skill itself
-└── README.md  # this file
-```
 
 ## Notes
 
