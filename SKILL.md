@@ -1,6 +1,6 @@
 ---
 name: study-guide
-description: Builds a styled PDF study guide / reviewer on any topic or lesson (school subjects, class reports, exam prep, presentation or defense prep, uploaded notes or slides turned into a reviewer). Use whenever the user asks for a reviewer, study guide, study notes, lesson summary, exam prep, presentation prep, or "guide 1 of 3"-style document, even if they don't mention PDF or styling. If the lesson is about programming, it also adds code blocks, method tables, and code walkthroughs. Output is a two-column A4 PDF with a fruit-themed title banner (default raspberry), dark part headers, Finlandica text and JetBrains Mono for code.
+description: Builds a styled PDF study guide / reviewer on any topic or lesson (school subjects, class reports, exam prep, presentation or defense prep, uploaded notes or slides turned into a reviewer). Use whenever the user asks for a reviewer, study guide, study notes, lesson summary, exam prep, presentation prep, or "guide 1 of 3"-style document, even if they don't mention PDF or styling. If the lesson is about programming, it also adds code blocks, method tables, and code walkthroughs. Output is a two-column A4 PDF with a fruit-themed title banner (default raspberry), dark part headers, Finlandica Text text and JetBrains Mono for code.
 ---
 
 # Study Guide
@@ -45,17 +45,19 @@ Skip all of this for non-programming topics: no code blocks, no method tables.
 
 ## Fonts
 
-- **Body, headings, UI text: Finlandica** (400, 500, 600, 700)
-- **Code, inline code, eyebrow labels, card labels: JetBrains Mono** (400, 500, 700)
+- **Body, headings, UI text: Finlandica Text** (400, 500, 600, 700) - https://fonts.google.com/specimen/Finlandica+Text
+- **Code, inline code, eyebrow labels, card labels: JetBrains Mono** (400, 500, 700) - https://www.jetbrains.com/lp/mono/
 
 Google Fonts domains are blocked, so use npm:
 
 ```bash
-npm install @fontsource/finlandica @fontsource/jetbrains-mono
+npm install @fontsource/finlandica-text @fontsource/jetbrains-mono
 # files are in node_modules/@fontsource/<name>/files/
+# if the static package is missing, use the variable one instead:
+# npm install @fontsource-variable/finlandica-text
 ```
 
-Embed with `@font-face` (latin subset is enough). Fallbacks: `Finlandica, "Segoe UI", sans-serif` and `"JetBrains Mono", Consolas, monospace`.
+Embed with `@font-face` (latin subset is enough). Fallbacks: `"Finlandica Text", "Segoe UI", sans-serif` and `"JetBrains Mono", Consolas, monospace`.
 
 ## Color themes
 
@@ -111,9 +113,9 @@ Use WeasyPrint (`pip install weasyprint --break-system-packages`) or headless Ch
 ```css
 :root { --primary:#D93868; --dark:#1F4D2B; --tint:#FDEEF2; --divider:#E3E3E3; }
 @page { size: A4; margin: 14mm 14mm 16mm;
-  @bottom-left  { content: "Subject · Study guide"; font: 700 7pt Finlandica; color:#555; border-top:1.5pt solid #D93868; padding-top:3pt; width:100% }
-  @bottom-right { content: "Page " counter(page) " of " counter(pages); font: 700 7pt Finlandica; color:#555 } }
-body { font: 400 10pt/1.5 Finlandica, sans-serif; color:#222 }
+  @bottom-left  { content: "Subject · Study guide"; font: 700 7pt "Finlandica Text"; color:#555; border-top:1.5pt solid #D93868; padding-top:3pt; width:100% }
+  @bottom-right { content: "Page " counter(page) " of " counter(pages); font: 700 7pt "Finlandica Text"; color:#555 } }
+body { font: 400 10pt/1.5 "Finlandica Text", sans-serif; color:#222 }
 .cols { column-count: 2; column-gap: 8mm; column-rule: .5pt solid var(--divider) }
 code, pre { font-family: "JetBrains Mono", monospace }
 ```
