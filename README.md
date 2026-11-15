@@ -1,23 +1,4 @@
-# Study Guide Skill 🍇
-🍈
-🍉
-🍊
-🍋
-🍋‍🟩
-🍌
-🍍
-🥭
-🍎
-🍏
-🍐
-🍑
-🍒
-🍓
-🫐
-🥝
-🍅
-🫒
-🥥
+# Study Guide Skill
 
 A Claude skill that turns any topic, lesson, notes, or slides into a clean, two-column PDF reviewer. If the lesson is about programming, it adds code blocks, method tables, and code walkthroughs.
 
@@ -35,7 +16,7 @@ A Claude skill that turns any topic, lesson, notes, or slides into a clean, two-
 
 | Use | Font |
 |---|---|
-| Text and headings | [Finlandica](https://fonts.google.com/specimen/Finlandica) |
+| Text and headings | [Finlandica Text](https://fonts.google.com/specimen/Finlandica+Text) |
 | Code and labels | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) |
 
 ## Install
