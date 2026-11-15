@@ -4,11 +4,11 @@ A Claude skill that turns any topic, lesson, notes, or slides into a clean, two-
 
 ## What it makes
 
-- Raspberry title banner with a `GUIDE 1 OF 3`-style eyebrow
-- Dark green part banners (`PART 1`, `PART 2`...)
+- Fruit-themed title banner (default raspberry, or pick one, random, or let Claude decide) with a `GUIDE 1 OF 3`-style eyebrow
+- Dark part banners (`PART 1`, `PART 2`...)
 - Numbered sections (`1.1`, `1.2`...) with plain explanations, analogies, and examples
 - Card boxes, color-coded tables, and step-by-step flows
-- Review helpers: key terms, likely questions with answers, quick recap
+- Review helpers: key terms, questions the professor might ask with answers, quick recap
 - Programming lessons only: syntax-labeled code blocks, method tables, "explain this code" questions
 - Footer with `Page X of N`
 
