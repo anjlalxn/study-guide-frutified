@@ -1,4 +1,23 @@
-# Study Guide Skill
+# Study Guide Skill 🍇
+🍈
+🍉
+🍊
+🍋
+🍋‍🟩
+🍌
+🍍
+🥭
+🍎
+🍏
+🍐
+🍑
+🍒
+🍓
+🫐
+🥝
+🍅
+🫒
+🥥
 
 A Claude skill that turns any topic, lesson, notes, or slides into a clean, two-column PDF reviewer. If the lesson is about programming, it adds code blocks, method tables, and code walkthroughs.
 
