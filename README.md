@@ -38,4 +38,5 @@ Just ask in chat, for example:
 
 ## Notes
 
-Colors are approximate. Edit the palette table in `SKILL.md` to match your own theme.
+- Colors are approximate. Edit the palette table in `SKILL.md` to match your own theme.
+- **Sample PDF disclaimer:** The sample PDFs included in this repository were generated using this Study Guide Skill to demonstrate its output and formatting capabilities. They are actual examples of the skill in use, not fixed templates or guaranteed results. Generated PDFs may vary depending on the source material, topic complexity, prompts, and Claude's generation process. Differences in layout, pagination, formatting, and content are expected between generations.
