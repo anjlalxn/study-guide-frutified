@@ -27,7 +27,7 @@ Turns a topic, lesson, notes, slides, or a repo into a friendly, easy-to-review 
    - Likely questions a teacher or panel might ask, with short model answers
    - Quick recap bullets
    - If it's a presentation or defense: a sample explanation written in first person that the student can say aloud
-7. Short sentences. Define jargon at first use. Bold key terms.
+7. Short sentences. Define jargon at first use. Bold key terms. Prepared by (names), Thank you slides, etc. should be left out.
 
 ### If the lesson is about programming
 
