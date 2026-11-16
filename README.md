@@ -16,10 +16,11 @@ A Claude skill that turns any topic, lesson, notes, or slides into a clean, two-
 
 | Use | Font |
 |---|---|
-| Text and headings | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) |
+| Text and headings | [Finlandica Text](https://fonts.google.com/specimen/Finlandica+Text) |
+| Text and headings (fallback) | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) |
 | Code and labels | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) |
 
-Both fonts are embedded in the generated PDF.
+Finlandica Text is used by default. If it can't be installed or embedded, the skill falls back to Bricolage Grotesque. The fonts used are embedded in the generated PDF.
 
 ## Install
 
