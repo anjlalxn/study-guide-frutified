@@ -37,6 +37,17 @@ Just ask in chat, for example:
 - "Reviewer for my capstone defense based on this repo"
 
 
+## Token usage and plan
+
+Generating a study guide is heavier than a normal chat message. For each guide, Claude reads your source material, plans the parts, writes the full content, runs code to build the PDF, and checks the rendered pages before handing it over. Because of that, one guide can use a noticeable amount of your usage allowance.
+
+- **Free plan:** Skills and file creation with code execution are available, so the skill works. Free usage limits are lower, so you may hit your limit partway through, especially with long slide decks or several guides in one sitting. If that happens, wait for the limit to reset and continue.
+- **Paid plan (Pro or higher):** Recommended if you make guides often, upload large files, or split a big topic into several numbered guides (`GUIDE 1 OF 3`, etc.). You get a higher usage allowance, so a multi-guide set is much less likely to get cut off.
+- **What uses the most:** large uploads (long PDFs, big slide decks, whole repos), long chats, and building many guides in the same conversation.
+- **Ways to save usage:** upload only the pages or slides you need, make one guide per chat, and ask for one part at a time for very large topics.
+
+Exact limits depend on your plan, the model you use, how long your chats are, and how large your files are, and they can change. Check Anthropic's [pricing page](https://claude.com/pricing) and [Help Center](https://support.claude.com) for the current numbers.
+
 ## Notes
 
 - Colors are approximate. Edit the palette table in `SKILL.md` to match your own theme.
