@@ -1,6 +1,6 @@
 ---
 name: study-guide
-description: Builds a styled PDF study guide / reviewer on any topic or lesson (school subjects, class reports, exam prep, presentation or defense prep, uploaded notes or slides turned into a reviewer). Use whenever the user asks for a reviewer, study guide, study notes, lesson summary, exam prep, presentation prep, or "guide 1 of 3"-style document, even if they don't mention PDF or styling. If the lesson is about programming, it also adds code blocks, method tables, and code walkthroughs. Output is a two-column A4 PDF with a fruit-themed title banner (default raspberry), dark part headers, Bricolage Grotesque and JetBrains Mono for code.
+description: Builds a styled PDF study guide / reviewer on any topic or lesson (school subjects, class reports, exam prep, presentation or defense prep, uploaded notes or slides turned into a reviewer). Use whenever the user asks for a reviewer, study guide, study notes, lesson summary, exam prep, presentation prep, or "guide 1 of 3"-style document, even if they don't mention PDF or styling. If the lesson is about programming, it also adds code blocks, method tables, and code walkthroughs. Output is a two-column A4 PDF with a fruit-themed title banner (default raspberry), dark part headers, Finlandica Text (Bricolage Grotesque as fallback) and JetBrains Mono for code.
 ---
 
 # Study Guide
@@ -45,21 +45,22 @@ Skip all of this for non-programming topics: no code blocks, no method tables.
 
 ## Fonts
 
-- **Body, headings, UI text: Bricolage Grotesque** - https://fonts.google.com/specimen/Bricolage+Grotesque
+- **Body, headings, UI text: Finlandica Text** (primary) - https://fonts.google.com/specimen/Finlandica+Text
+- **Fallback for body, headings, UI text: Bricolage Grotesque** - used only if Finlandica Text cannot be installed or embedded - https://fonts.google.com/specimen/Bricolage+Grotesque
 - **Code, inline code, eyebrow labels, card labels: JetBrains Mono** (400, 500, 700) - https://www.jetbrains.com/lp/mono/
 
 Google Fonts domains are blocked, so use npm:
 
 ```bash
-npm install @fontsource/bricolage-grotesque @fontsource/jetbrains-mono
+npm install @fontsource/finlandica-text @fontsource/bricolage-grotesque @fontsource/jetbrains-mono
 # files are in node_modules/@fontsource/<name>/files/
-# if the static package is missing, use the variable one instead:
-# npm install @fontsource-variable/bricolage-grotesque
+# if a static package is missing, use the variable one instead, e.g.:
+# npm install @fontsource-variable/finlandica-text
 ```
 
-Embed with `@font-face` (latin subset is enough).
+Embed all three with `@font-face` (latin subset is enough). Try Finlandica Text first. If it fails to install or its files are missing, the guide still builds with Bricolage Grotesque, and you tell the user which font was actually used.
 
-Fallbacks: `"Bricolage Grotesque", "Segoe UI", sans-serif` and `"JetBrains Mono", Consolas, monospace`.
+Fallbacks: `"Finlandica Text", "Bricolage Grotesque", "Segoe UI", sans-serif` and `"JetBrains Mono", Consolas, monospace`.
 
 ## Color themes
 
@@ -115,9 +116,9 @@ Use WeasyPrint (`pip install weasyprint --break-system-packages`) or headless Ch
 ```css
 :root { --primary:#D93868; --dark:#1F4D2B; --tint:#FDEEF2; --divider:#E3E3E3; }
 @page { size: A4; margin: 14mm 14mm 16mm;
-  @bottom-left  { content: "Subject · Study guide"; font: 700 7pt "Bricolage Grotesque"; color:#555; border-top:1.5pt solid #D93868; padding-top:3pt; width:100% }
-  @bottom-right { content: "Page " counter(page) " of " counter(pages); font: 700 7pt "Bricolage Grotesque"; color:#555 } }
-body { font: 400 10pt/1.5 "Bricolage Grotesque", sans-serif; color:#222 }
+  @bottom-left  { content: "Subject · Study guide"; font: 700 7pt "Finlandica Text", "Bricolage Grotesque"; color:#555; border-top:1.5pt solid #D93868; padding-top:3pt; width:100% }
+  @bottom-right { content: "Page " counter(page) " of " counter(pages); font: 700 7pt "Finlandica Text", "Bricolage Grotesque"; color:#555 } }
+body { font: 400 10pt/1.5 "Finlandica Text", "Bricolage Grotesque", sans-serif; color:#222 }
 .cols { column-count: 2; column-gap: 8mm; column-rule: .5pt solid var(--divider) }
 code, pre { font-family: "JetBrains Mono", monospace }
 ```
@@ -132,6 +133,6 @@ code, pre { font-family: "JetBrains Mono", monospace }
 - Review section (key terms, professor questions, recap) is present.
 - For programming lessons: code is real, matches course style, and is explained.
 - Theme colors are applied consistently, text on banners is readable, and the chosen theme is named to the user.
-- Both fonts embedded (check with `pdffonts`).
+- Fonts embedded (check with `pdffonts`): Finlandica Text and JetBrains Mono, or Bricolage Grotesque and JetBrains Mono if Finlandica Text was unavailable.
 - No orphaned banners, split code blocks, or table overflow; page numbers read `Page X of N`.
 - Briefly tell the user what's covered and what the next guide will cover.
